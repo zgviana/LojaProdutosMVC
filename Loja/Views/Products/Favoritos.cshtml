@@ -1,0 +1,112 @@
+﻿@using Loja.Entidades
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Favoritos";
+}
+
+@if (ViewBag.MensagemErro != null)
+{
+    @*<div class="alert alert-danger">
+            @ViewBag.MensagemErro
+</div>*@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Erro</title>
+        @* <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f9f9f9;
+            }
+
+            .container {
+                text-align: center;
+                padding: 30px;
+                border: 1px solid #ddd;
+                border-radius: 12px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+
+                .container img {
+                    width: 150px;
+                    margin-bottom: 20px;
+                }
+
+            .mensagem {
+                font-size: 20px;
+                color: #b00020;
+                margin-bottom: 20px;
+            }
+
+            .botao-voltar {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                text-decoration: none;
+            }
+        </style> *@
+    </head>
+    <body>
+            <div class="container">            
+                <div class="mensagem">
+                    <img src="/Images/Exclamacao.JPG" alt="Erro" style="width:100px; height:100px;"/>
+                    Erro: @ViewBag.MensagemErro
+                </div>
+            </div>
+    </body>
+    </html>
+}
+else
+{
+
+    
+
+    <h2>Lista de Favoritos</h2>
+
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="d-flex justify-content-end">
+                        @* <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary">Detalhes</a> *@
+
+                        <a asp-action="AddFavoritos" asp-route-id="@product.Id" asp-route-indFavoritos="@product.Favorito" asp-route-paginaRedirect="Favoritos" class="btn btn-light">
+                            <!--coração preenchido classe bi-heart-fill / coracao vazio bi bi-heart-->
+                            @if (product.Favorito)
+                            {
+                                <i style="color:red" class="bi-heart-fill"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-heart"></i>
+                            }
+
+                        </a>
+                    </div>
+                    <a asp-action="Details" asp-route-id="@product.Id" asp-route-paginaAtual="Favoritos">
+                        <img src="@product.Image" class="card-img-top" alt="@product.Title" style="max-height: 250px; object-fit: contain;" />
+                    </a>
+                    <div class="card-body">
+                        <a style="color:dimgray"  asp-action="Details" asp-route-id="@product.Id" asp-route-paginaAtual="Favoritos">
+                            <h5 class="card-title">@product.Title</h5>
+                        </a>
+                        <h4>Preço: @product.Price.ToString("C")</h4>
+                    </div>
+
+                    
+                </div>
+            </div>
+        }
+    </div>
+}
