@@ -98,7 +98,7 @@ else
                         <img src="@product.Image" class="card-img-top" alt="@product.Title" style="max-height: 250px; object-fit: contain;" />
                     </a>
                     <div class="card-body">
-                        <a asp-action="Details" asp-route-id="@product.Id" asp-route-paginaAtual="Favoritos">
+                        <a style="color:dimgray"  asp-action="Details" asp-route-id="@product.Id" asp-route-paginaAtual="Favoritos">
                             <h5 class="card-title">@product.Title</h5>
                         </a>
                         <h4>Preço: @product.Price.ToString("C")</h4>

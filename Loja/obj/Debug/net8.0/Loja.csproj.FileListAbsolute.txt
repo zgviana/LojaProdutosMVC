@@ -229,3 +229,4 @@ D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\refint\Loja.dll
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.pdb
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.genruntimeconfig.cache
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\ref\Loja.dll
+D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.sourcelink.json
