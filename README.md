@@ -2,7 +2,7 @@
 
 Projeto ASP.NET Core MVC para listagem de produtos com favoritos e carregamento entre páginas.
 
-![Loja MVC](https://github.com/zgviana/LojaProdutosMVC/blob/main/wwwroot/Images/Principal.JPG) <!-- Substitua pela imagem da sua aplicação -->
+![Loja MVC](https://github.com/zgviana/LojaProdutosMVC/blob/main/Loja/wwwroot/Images/Principal.JPG) <!-- Substitua pela imagem da sua aplicação -->
 
 ---
 
