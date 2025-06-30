@@ -65,9 +65,17 @@ namespace Loja.Controllers
             return existFavorito;
         }
 
-        public async Task<IActionResult> Details(int id, string paginaAtual)
+        public async Task<IActionResult> Details(int id, string paginaAtual, bool indFavoritos)
         {
-            ViewBag.paginaAtual = paginaAtual;
+            if (paginaAtual.Equals("Details"))
+                if (indFavoritos)
+                    ViewBag.paginaAtual = "Favoritos";
+                else
+                    ViewBag.paginaAtual = "Index";
+            else
+                ViewBag.paginaAtual = paginaAtual;
+
+
             HttpRequest req = Request;
             var products = await _productService.GetAllProductsAsync();
             //buscando na lista o produto por ID
@@ -106,7 +114,7 @@ namespace Loja.Controllers
                         productsFavoritos.Add(product);
                     }
                 }
-
+               
                 return View(productsFavoritos);
             }
             catch (Exception ex) {
@@ -115,7 +123,7 @@ namespace Loja.Controllers
             }
         }
 
-        public IActionResult AddFavoritos(int id, bool indFavoritos, string paginaRedirect)
+        public IActionResult AddFavoritos(int idProduct, bool indFavoritos, string paginaRedirect)
         {            
             List<int> favoritos;           
 
@@ -132,13 +140,13 @@ namespace Loja.Controllers
             //Se ele já é favoritado e ta clicando denovo em favoritos, vamos retirar ele do favoritos
             if (indFavoritos)
             {
-                if (favoritos.Contains(id))
-                    favoritos.Remove(id);
+                if (favoritos.Contains(idProduct))
+                    favoritos.Remove(idProduct);
             }
             else
             {
-                if (!favoritos.Contains(id))
-                    favoritos.Add(id);
+                if (!favoritos.Contains(idProduct))
+                    favoritos.Add(idProduct);
             }
 
             // Salvar o cookie novamente
@@ -149,7 +157,11 @@ namespace Loja.Controllers
             //Gravando favoritos
             Response.Cookies.Append(cookie, string.Join(",", favoritos), cookieOptions);
 
-            return RedirectToAction(paginaRedirect);
+            if (paginaRedirect.Equals("Details"))
+                return RedirectToAction(paginaRedirect,"Products", new {id = idProduct, paginaAtual = "Details", indFavoritos = indFavoritos });
+            else
+                return RedirectToAction(paginaRedirect);
+
         }
     }
 }

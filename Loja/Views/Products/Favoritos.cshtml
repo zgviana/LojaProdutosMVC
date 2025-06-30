@@ -74,6 +74,10 @@ else
     <h2>Lista de Favoritos</h2>
 
     <div class="row">
+        @if(Model.Count == 0)
+        {
+            <span>Você ainda não possui produtos favoritos.</span>
+        }
         @foreach (var product in Model)
         {
             <div class="col-md-4 mb-4">
@@ -81,7 +85,7 @@ else
                     <div class="d-flex justify-content-end">
                         @* <a asp-action="Details" asp-route-id="@product.Id" class="btn btn-primary">Detalhes</a> *@
 
-                        <a asp-action="AddFavoritos" asp-route-id="@product.Id" asp-route-indFavoritos="@product.Favorito" asp-route-paginaRedirect="Favoritos" class="btn btn-light">
+                        <a asp-action="AddFavoritos" asp-route-idProduct="@product.Id" asp-route-indFavoritos="@product.Favorito" asp-route-paginaRedirect="Favoritos" class="btn btn-light">
                             <!--coração preenchido classe bi-heart-fill / coracao vazio bi bi-heart-->
                             @if (product.Favorito)
                             {
@@ -98,7 +102,7 @@ else
                         <img src="@product.Image" class="card-img-top" alt="@product.Title" style="max-height: 250px; object-fit: contain;" />
                     </a>
                     <div class="card-body">
-                        <a style="color:dimgray"  asp-action="Details" asp-route-id="@product.Id" asp-route-paginaAtual="Favoritos">
+                        <a style="color:dimgray" asp-action="Details" asp-route-id="@product.Id" asp-route-paginaAtual="Favoritos" asp-route-indFavoritos="@product.Favorito">
                             <h5 class="card-title">@product.Title</h5>
                         </a>
                         <h4>Preço: @product.Price.ToString("C")</h4>
