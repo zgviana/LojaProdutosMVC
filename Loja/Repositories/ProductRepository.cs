@@ -14,7 +14,7 @@ namespace Loja.Repositories
                 List<Product>? listProduct = new List<Product>();
 
                 var response = await httpClient.GetStringAsync("https://fakestoreapi.com/products");
-                listProduct = JsonSerializer.Deserialize<List<Product>>(response); //JsonConvert.DeserializeObject<List<Product>>(response);
+                listProduct = JsonSerializer.Deserialize<List<Product>>(response); 
                 return listProduct;
             }
         }
