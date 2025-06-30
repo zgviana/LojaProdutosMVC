@@ -1,1 +1,52 @@
+## Ignore arquivos e pastas padrão do Visual Studio
 .vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Ignore arquivos de build
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+## Ignore pastas de debug e release
+Debug/
+Release/
+
+## Ignore arquivos gerados
+*.log
+*.tlog
+*.cache
+*.pdb
+*.mdb
+*.ilk
+*.ipch
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.dbmdl
+
+## Ignore pacotes
+packages/
+*.nupkg
+
+## Ignore arquivos de publish temporários
+*.Publish.xml
+*.pubxml
+*.publishproj
+
+## Ignore arquivos de configuração locais
+*.local.json
+
+## Ignore configurações específicas de VS Code
+.vscode/
+
+## Ignore arquivos temporários do sistema
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
