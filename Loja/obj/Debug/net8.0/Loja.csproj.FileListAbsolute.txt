@@ -210,6 +210,7 @@ D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.csproj.CoreCompileInputs.cache
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.RazorAssemblyInfo.cache
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.RazorAssemblyInfo.cs
+D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.sourcelink.json
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\scopedcss\bundle\Loja.styles.css
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\scopedcss\projectbundle\Loja.bundle.scp.css
@@ -229,4 +230,3 @@ D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\refint\Loja.dll
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.pdb
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.genruntimeconfig.cache
 D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\ref\Loja.dll
-D:\Projetos\.NET\Loja\Loja\obj\Debug\net8.0\Loja.sourcelink.json

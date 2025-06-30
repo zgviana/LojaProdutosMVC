@@ -1,6 +1,9 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\Detalhes.JPG
 wwwroot\Images\Exclamacao.JPG
+wwwroot\Images\Favoritos.JPG
+wwwroot\Images\Principal.JPG
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

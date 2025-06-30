@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\Loja.f9ljrl09qi.bundle.scp.css"
     },
     {
+      "Id": "D:\\Projetos\\.NET\\Loja\\Loja\\wwwroot\\Images\\Detalhes.JPG",
+      "PackagePath": "staticwebassets\\Images\\Detalhes.JPG"
+    },
+    {
       "Id": "D:\\Projetos\\.NET\\Loja\\Loja\\wwwroot\\Images\\Exclamacao.JPG",
       "PackagePath": "staticwebassets\\Images\\Exclamacao.JPG"
+    },
+    {
+      "Id": "D:\\Projetos\\.NET\\Loja\\Loja\\wwwroot\\Images\\Favoritos.JPG",
+      "PackagePath": "staticwebassets\\Images\\Favoritos.JPG"
+    },
+    {
+      "Id": "D:\\Projetos\\.NET\\Loja\\Loja\\wwwroot\\Images\\Principal.JPG",
+      "PackagePath": "staticwebassets\\Images\\Principal.JPG"
     },
     {
       "Id": "D:\\Projetos\\.NET\\Loja\\Loja\\wwwroot\\css\\site.css",
